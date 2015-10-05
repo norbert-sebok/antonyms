@@ -32,6 +32,7 @@ def split_by(text, before, after):
         text = text.strip()
         other = other.replace(after, '').strip() or None
     else:
+        text = text.strip()
         other = None
     return text, other
 

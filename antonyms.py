@@ -22,7 +22,7 @@ def get_htmls():
     for name in sorted(root.namelist()):
         if name.startswith('OEBPS/text/content'):
             if name >= 'OEBPS/text/content0006.xhtml':
-                print name
+                print 'processing', name
                 yield root.read(name)
 
 

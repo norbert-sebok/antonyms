@@ -34,13 +34,13 @@ for html in get_htmls():
 
     for p in sel.xpath('//p'):
         text = p.extract()
-        (word, category, type), antonyms = parse_block(text)
+        (word, category, type, comment), antonyms = parse_block(text)
 
         if word:
             if (word, category) in words:
                 current = words[(word, category)]
             else:
-                words[(word, category)] = current = Word(word, category, type)
+                words[(word, category)] = current = Word(word, category, type, comment)
 
         for (word, category, type, comment) in antonyms:
             if (word, current.category) in words:

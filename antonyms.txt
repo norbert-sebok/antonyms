@@ -6,156 +6,6 @@ otthonos
 rögtönzött
 való I.
 
-[</strong>alacsony]
-óriás II.
-
-[</strong>barátságos]
-barátságtalan
-
-[</strong>bizonytalan]
-meggyőző
-
-[</strong>debella]
-parciális
-
-[</strong>elkötelezetlen]
-elkötelezett
-
-[</strong>erős]
-megtámadhatatlan
-
-[</strong>homorú]
-kidudorodó
-
-[</strong>irányítható]
-irányíthatatlan
-
-[</strong>jókedvű]
-bánatos
-
-[</strong>jószívű]
-irigy
-
-[</strong>korlátlan]
-feltételes
-
-[</strong>kézenfekvő]
-megfejthetetlen
-
-[</strong>morális]
-immorális
-
-[</strong>okos]
-bamba
-
-[</strong>rút]
-csodaszép
-
-[</strong>salakos]
-salaktalan
-
-[</strong>silány]
-bámulatos
-
-[</strong>szabályszerű]
-kirívó
-
-[</strong>szélső]
-közbülső
-
-[</strong>vékony]
-teltkarcsú
-
-[</strong>újszerű]
-banális
-
-[<em>biz</em>:]
-meleg
-nyerő
-ütődött
-
-[<em>durva</em>:]
-rohadt
-
-[<em>id</em>:]
-disszonáns
-
-[<em>szak</em>:]
-disszonáns
-
-[<em>szleng</em>:]
-béna
-mezei
-rázós
-
-[<strong>]
-lenyűgöző
-lusta
-olcsó
-pórias
-rendes
-rusnya
-savanyú
-senki I.
-senki I.
-sületlen
-szennyes
-
-[[bor]
-édes
-
-[[előadás]
-vontatott
-
-[[győzelem]
-átütő
-
-[[javaslat]
-értelmes
-
-[[magatartás]
-arrogáns
-
-[[megoldás]
-igényes
-
-[[ország]
-alárendelt
-
-[[probléma]
-súlyos
-
-[[retek]
-friss
-
-[[szó]
-szépítő
-
-[[tekintet]
-vizenyős
-
-[[tészta]
-nyúlós
-
-[[vicc]]
-szakállas
-
-[[vállalkozás]
-rossz I.
-
-[[áramlat]
-sarkvidéki
-trópusi
-
-[[összeg]
-tetemes
-
-[[ötlet]
-beteg I.
-
-[[üzlet]]
-fekete
-
 [abnormális]
 normális
 szokványos
@@ -588,6 +438,7 @@ nagy I.
 nyakigláb
 nyúlánk
 nyurga
+óriás II.
 sudár
 
 [alacsonyrendű]
@@ -993,7 +844,6 @@ elsőrendű
 elsődleges
 fontos
 primer
-[ország
 független
 szabad
 önálló
@@ -1381,7 +1231,6 @@ délsarki
 délszaki
 
 [arrogáns]
-[magatartás
 udvarias
 visszafogott
 udvarias
@@ -1709,7 +1558,7 @@ sikeres
 szerencsés
 
 [bamba]
-</strong>okos
+okos
 eszes
 jófejű
 értelmes
@@ -1719,7 +1568,7 @@ beszédes
 eleven
 
 [banális]
-</strong>újszerű
+újszerű
 eredeti
 különleges
 eredeti I.
@@ -1769,6 +1618,7 @@ rossz
 haragos
 megvető
 öldöklő
+barátságtalan
 bizalmatlan
 cudar
 fagyos
@@ -1812,7 +1662,7 @@ zord
 [barátságtalan]
 baráti
 barátságos
-</strong>barátságos
+barátságos
 kedves
 közvetlen
 szíves
@@ -1975,6 +1825,7 @@ simlis
 sötét
 svihák
 szélhámos
+szennyes
 tisztátalan
 tisztességtelen
 utolsó
@@ -2328,7 +2179,6 @@ gyógyult
 ép
 normális
 épelméjű
-[ötlet
 kitűnő
 nagyszerű
 remek
@@ -3184,7 +3034,7 @@ gyűlöletes
 gyűlölt
 
 [bámulatos]
-</strong>silány
+silány
 gyatra
 gyatra
 mindennapos
@@ -3192,7 +3042,7 @@ silány
 szokványos
 
 [bánatos]
-</strong>jókedvű
+jókedvű
 vidám
 derűs
 víg
@@ -3223,6 +3073,9 @@ eredeti
 frappáns
 szellemes
 szellemteli
+
+[bárki]
+senki I.
 
 [bármikor]
 sohanapján
@@ -3425,7 +3278,7 @@ finnyás
 aranykezű
 mozgékony
 mozgásképes
-<em>szleng</em>:
+ügyes
 talpraesett
 karakán
 mozgásképes
@@ -3491,6 +3344,7 @@ csacska
 értelmetlen
 hígagyú
 hígeszű
+sületlen
 törvénysértő
 
 [búbánatos]
@@ -4209,7 +4063,6 @@ nyers
 hamvas
 bársonyos
 üde
-nyerő
 üde
 
 [csevegő]
@@ -4345,14 +4198,13 @@ bárdolatlan
 nyers
 érdes
 iskolázatlan
-nyerő
 
 [csitító]
 ingerlő
 őrjítő
 
 [csodaszép]
-</strong>rút
+rút
 csúf
 csúnya
 ronda
@@ -5281,9 +5133,9 @@ betelepülő
 [disszonáns]
 behízelgő
 dallamos
-<em>szak</em>:
+harmonikus
 összecsengő
-<em>id</em>:
+összeillő
 passzoló
 harmonikus
 összecsengő
@@ -6385,6 +6237,7 @@ parádés
 páratlan
 pazar
 rafinált
+rázós
 rejtélyes
 sallangos
 szövevényes
@@ -7274,11 +7127,12 @@ létező
 
 [elkötelezetlen]
 elkötelezett
+elkötelezett
 
 [elkötelezett]
 bizonytalan
 elkötelezetlen
-</strong>elkötelezetlen
+elkötelezetlen
 semleges
 objektív
 pártatlan
@@ -8348,7 +8202,6 @@ kíméletlen
 könyörtelen
 kőszívű
 lélektelen
-nyerő
 sátáni
 szúrós
 vérengző
@@ -8681,7 +8534,6 @@ hasztalan I.
 hatástalan
 hiábavaló
 improduktív
-mechanikus
 sikertelen
 sziszifuszi
 üres
@@ -9715,7 +9567,7 @@ fényes
 ragyogó
 derűs
 vidám
-[üzlet]
+tiszta
 legális
 törvényes
 piros
@@ -9797,7 +9649,6 @@ feldolgozatlan
 feldolgozatlan
 megmunkálatlan
 nyers
-nyerő
 
 [feldúlt]
 nyugodt
@@ -10274,7 +10125,7 @@ titkolt
 
 [feltételes]
 abszolút
-</strong>korlátlan
+korlátlan
 szabad
 feltétlen
 abszolút
@@ -10668,7 +10519,6 @@ tapintatlan
 illetlen
 figyelmetlen
 nemtörődöm
-nyerő
 réveteg
 süket
 szórakozott
@@ -10799,7 +10649,6 @@ közönséges
 mocskos
 mosdatlan
 műveletlen
-nyerő
 ordináré
 otromba
 paraszt II.
@@ -10824,7 +10673,6 @@ durva
 
 [finomított]
 durva
-nyerő
 tisztítatlan
 
 [firkás]
@@ -10836,7 +10684,6 @@ jóhiszemű
 kampós
 horgas
 hegyes2
-hordozható
 
 [fitt]
 alélt
@@ -10979,7 +10826,6 @@ tárgyi
 [fogamzásképes]
 terméketlen
 meddő
-mechanikus
 terméketlen
 
 [fogas]
@@ -11497,7 +11343,6 @@ mirelit
 szárított
 száraz
 poshadt
-[retek
 fás
 pudvás
 fülledt
@@ -11512,6 +11357,7 @@ kialvatlan
 kimerült
 kókadt
 lankadt
+lusta
 megviselt
 mélyhűtött
 mirelit
@@ -12339,7 +12185,6 @@ főtlen
 rágós
 nyers
 kemény
-nyerő
 sült
 
 [fővárosi]
@@ -13293,7 +13138,6 @@ meddő
 haszontalan
 sikertelen
 haszontalan
-mechanikus
 sikertelen
 terméketlen
 
@@ -13537,7 +13381,6 @@ sima
 [habozó]
 céltudatos
 elszánt
-meggyőző
 
 [habzsol]
 csipeget
@@ -14164,6 +14007,7 @@ tikkadt
 
 [harmonikus]
 diszharmonikus
+disszonáns
 fülsértő
 kellemetlen
 fülsértő
@@ -14272,7 +14116,6 @@ hiábavaló
 káros
 kártékony
 kedvezőtlen
-mechanikus
 mihaszna
 ráfizetéses
 rossz I.
@@ -14414,7 +14257,6 @@ jogtalan
 elévült
 semmis
 hatálytalan
-megtámadhatatlan
 semmis
 
 [hatálytalan]
@@ -14889,6 +14731,7 @@ leszbikus
 homokos2
 homoszexuális
 leszbikus
+meleg
 
 [hetyke]
 alázatos
@@ -15451,6 +15294,7 @@ domború
 domború
 kidudorodó
 konvex
+kidudorodó
 konvex
 
 [homoszexuális]
@@ -15498,9 +15342,6 @@ idegen I.
 rögzített
 mozdíthatatlan
 stabil
-fitos
-pisze
-turcsi
 mozdíthatatlan
 stabil
 
@@ -16645,7 +16486,6 @@ elhanyagolt
 hanyag
 felületes
 nemtörődöm
-[megoldás
 kezdetleges
 primitív
 olcsó
@@ -16781,6 +16621,7 @@ pikáns
 pimasz
 piszkos
 pofátlan
+pórias
 sikamlós
 szabados
 szeméremsértő
@@ -16966,7 +16807,7 @@ mozgó
 
 [immorális]
 erkölcsös
-</strong>morális
+morális
 erkölcsös
 tisztességes
 morális
@@ -17213,7 +17054,6 @@ változatlan
 konstans
 kiegyensúlyozott
 konstans
-meggyőző
 megingathatatlan
 rendíthetetlen
 rendületlen
@@ -17324,9 +17164,7 @@ kollegiális
 
 [inkomparábilis]
 összehasonlítható
-vmivel&gt;
 komparábilis
-vmivel&gt;
 komparábilis
 összehasonlítható
 
@@ -17527,7 +17365,7 @@ lelketlenség
 
 [irigy]
 adakozó
-</strong>jószívű
+jószívű
 adakozó
 bőkezű
 jószívű
@@ -17586,13 +17424,14 @@ elbűvölő
 bájos
 
 [irányíthatatlan]
-</strong>irányítható
+irányítható
 kormányozható
 engedékeny
 irányítható
 
 [irányítható]
 csökönyös
+irányíthatatlan
 irányíthatatlan
 kormányozhatatlan
 önfejű
@@ -18264,7 +18103,6 @@ megfellebbezhető
 megtámadható
 vitatható
 megfellebbezhető
-megtámadhatatlan
 
 [jogos]
 alaptalan
@@ -18664,6 +18502,7 @@ rosszlelkű
 rosszmájú
 
 [jókedvű]
+bánatos
 borongós
 borús
 bús
@@ -18797,6 +18636,7 @@ rusnya
 
 [jószívű]
 irgalmatlan
+irigy
 gonosz
 kegyetlen
 rosszindulatú
@@ -20150,13 +19990,12 @@ kidolgozatlan
 nyers
 megmunkálatlan
 vázlatos
-nyerő
 slendrián
 vázlatos
 
 [kidudorodó]
 homorú
-</strong>homorú
+homorú
 
 [kiegyenlítetlen]
 kifizetett
@@ -20485,7 +20324,6 @@ fejletlen
 gyerekes
 gyermekded
 infantilis
-nyerő
 
 [kifürkészhetetlen]
 átlátható
@@ -20804,7 +20642,7 @@ elenyésző
 elenyésző
 csekély
 észrevétlen
-</strong>szabályszerű
+szabályszerű
 szabályszerű
 
 [kis]
@@ -21545,9 +21383,7 @@ lyukacsos
 [komparábilis]
 inkomparábilis
 összehasonlíthatatlan
-vmivel&gt;
 inkomparábilis
-vmivel&gt;
 összehasonlíthatatlan
 
 [kompatibilis]
@@ -21767,7 +21603,6 @@ előkészítetlen
 nyers
 előkészítetlen
 feldolgozatlan
-nyerő
 
 [konzekvens]
 inkonzekvens
@@ -21876,6 +21711,7 @@ absztinens
 [korlátlan]
 behatárolt
 fékezett
+feltételes
 fékezett
 korlátozott
 részleges
@@ -22562,7 +22398,6 @@ készületlen
 főtlen
 kialakulatlan
 kiforratlan
-nyerő
 töredékes
 
 [készséges]
@@ -22728,6 +22563,7 @@ szalonképes
 [kézenfekvő]
 bonyolult
 nehéz
+megfejthetetlen
 megfejthetetlen
 
 [kézi]
@@ -23456,7 +23292,7 @@ saját
 egyéni
 
 [közbülső]
-</strong>szélső
+szélső
 szélső
 
 [közeli]
@@ -23871,6 +23707,7 @@ közismert
 hétköznapi
 átlagos
 mindennapos
+mezei
 mindennapi
 mindennapos
 rutinos
@@ -24723,7 +24560,7 @@ nyíratlan
 [lenyűgöző]
 visszataszító
 ellenszenves
-<strong>
+unalmas
 érdektelen
 taszító
 unalmas
@@ -24893,6 +24730,7 @@ modern
 időszerű
 nyerő
 menő
+nyerő
 
 [lezser]
 előírásos
@@ -25139,7 +24977,7 @@ szorgalmas
 tevékeny
 törekvő
 aktív
-<strong>
+friss
 fürge
 eleven
 ruganyos
@@ -25536,9 +25374,6 @@ talpraesett
 rátermett
 rátermett
 talpraesett
-
-[mackó]
-parciális
 
 [mackós]
 kecses
@@ -26036,20 +25871,6 @@ manuális
 alkotó
 kreatív
 önálló
-termő
-zsíros
-fogamzásképes
-termékeny
-szapora
-állapotos
-terhes
-várandós
-produktív
-áldásos
-sikeres
-eredményes
-gyümölcsöző
-hasznos
 
 [meddő]
 áldásos
@@ -26345,21 +26166,19 @@ pihentető
 [megfejthetetlen]
 kézenfekvő
 kifürkészhető
-megfejthető<strong>
-</strong>kézenfekvő
+megfejthető
+kézenfekvő
 nyilvánvaló
 triviális
 megfejthető
 
 [megfejthető]
 megfejthetetlen
+megfejthetetlen
 megoldhatatlan
 titokzatos
 rejtélyes
 megoldhatatlan
-
-[megfejthető<strong>]
-megfejthetetlen
 
 [megfelelő]
 alkalmatlan
@@ -26553,9 +26372,6 @@ vitatható
 bizonytalan
 cáfolható
 gyenge
-</strong>bizonytalan
-habozó
-ingadozó
 
 [meggyőződéses]
 hitetlen
@@ -26835,7 +26651,6 @@ csiszolatlan
 nyers
 durva
 műveletlen
-nyerő
 
 [megmásíthatatlan]
 megmásítható
@@ -27121,13 +26936,6 @@ kétséges
 vitatható
 cáfolható
 támadható
-</strong>erős
-védett
-érvényes
-hatályos
-jogerős
-megtámadhatatlan
-megtámadhatatlan
 
 [megtámadható]
 erős
@@ -27365,7 +27173,7 @@ kimért
 tartózkodó
 formális
 rideg
-<em>biz</em>:
+heteroszexuális
 sarkvidéki
 szellős
 személytelen
@@ -27671,7 +27479,7 @@ mérsékelt
 [mezei]
 városi
 urbánus
-<em>szleng</em>:
+különleges
 rendkívüli
 
 [mihaszna]
@@ -28054,6 +27862,7 @@ gigantikus
 [morális]
 amorális
 erkölcstelen
+immorális
 erkölcstelen
 rossz
 züllött
@@ -28813,7 +28622,6 @@ kidolgozatlan
 durva
 elnagyolt
 felületes
-nyerő
 
 [mócsingos]
 zsírtalan
@@ -29785,6 +29593,7 @@ tébolyodott
 terhelt
 természetellenes
 tökéletlen
+ütődött
 zavarodott
 zavart
 
@@ -29912,25 +29721,8 @@ nyeretlen
 levitézlett
 vesztes
 legyőzött
-<em>biz</em>:
+levitézlett
 vacak
-főtt
-kész
-konyhakész
-sült
-megmunkált
-feldolgozott
-finomított
-kidolgozott
-kiforrott
-végleges
-míves
-udvarias
-figyelmes
-emberséges
-finom
-csiszolt
-cserzett
 
 [nyeszlett]
 deltás
@@ -30478,7 +30270,6 @@ zömök
 
 [nyúlós]
 foszlós
-[tészta
 átsült
 ropogós
 foszlós
@@ -30802,6 +30593,7 @@ védekező
 agyalágyult
 badar
 balga
+bamba
 bárgyú
 botor
 bugyuta
@@ -30899,7 +30691,7 @@ drága
 költséges
 megfizethetetlen
 elérhetetlen
-<strong>
+értékes
 remek
 becses
 védett
@@ -31252,8 +31044,6 @@ globális
 korlátlan
 egész
 teljes
-</strong>debella
-mackó
 
 [parlagi]
 illedelmes
@@ -31688,7 +31478,6 @@ lángoló
 
 [pisze]
 hegyes2
-hordozható
 
 [piszkos]
 ápolt I.
@@ -32062,7 +31851,6 @@ eredménytelen
 haszontalan
 improduktív
 kimerült
-mechanikus
 improduktív
 haszontalan
 terméketlen
@@ -32431,7 +32219,7 @@ pompás
 nemesi
 nemes
 arisztokratikus
-<strong>
+illedelmes
 disztingvált
 kulturált
 úri
@@ -32922,7 +32710,7 @@ beste
 kókler
 svihák
 rohadt
-<strong>
+ál
 mű
 pót
 utálatos
@@ -32934,6 +32722,8 @@ rendetlen
 rendhagyó
 rendkívüli
 rohadék
+rohadt
+rusnya
 semmiházi
 speciális
 svihák
@@ -33387,7 +33177,7 @@ rendes
 friss
 ép
 egészséges
-<em>durva</em>:
+rendes
 becsületes
 
 [rohadék]
@@ -33604,7 +33394,6 @@ finom
 kedvező
 alkalmas
 megfelelő
-[vállalkozás
 nyereséges
 szerencsés
 hasznos
@@ -33800,7 +33589,7 @@ gyönyörű
 tiszta
 ápolt
 nett
-<strong>
+rendes
 jóravaló
 szép
 
@@ -33905,7 +33694,7 @@ tehetetlen
 sima
 egyenes
 jó
-<em>szleng</em>:
+egyszerű
 könnyű
 szimpla
 sima
@@ -34194,6 +33983,7 @@ sokoldalú
 művelt
 
 [rút]
+csodaszép
 gyönyörű
 jóképű
 meseszép
@@ -34277,10 +34067,11 @@ univerzális
 
 [salakos]
 salaktalan
+salaktalan
 
 [salaktalan]
 salakos
-</strong>salakos
+salakos
 
 [sallangmentes]
 sallangos
@@ -34322,7 +34113,6 @@ lekerekített
 
 [sarkvidéki]
 meleg
-[áramlat
 trópusi
 meleg
 trópusi
@@ -34350,7 +34140,7 @@ mókás
 édes
 cukros
 érett
-<strong>
+vidám
 jókedvű
 vicces
 vicces
@@ -34535,9 +34325,9 @@ mindenki
 mindannyian
 mindnyájan
 boldog-boldogtalan
-<strong>
+bárki
 akárki
-<strong>
+valaki
 egyesek
 sokan
 
@@ -34636,7 +34426,6 @@ hasztalan I.
 hatástalan
 hiábavaló
 levitézlett
-mechanikus
 nyomorult
 veszteséges
 meddő
@@ -34693,6 +34482,7 @@ trampli
 trampli
 
 [silány]
+bámulatos
 bőséges
 briliáns
 drága
@@ -35456,6 +35246,7 @@ tervezetlen
 
 [szabályszerű]
 irreguláris
+kirívó
 rendellenes
 érvénytelen
 szabálytalan
@@ -35615,7 +35406,7 @@ szakértő
 sima
 csupasz
 borotvált
-[vicc]
+új
 eredeti
 originális
 
@@ -35661,7 +35452,6 @@ kiegyensúlyozott
 
 [szapora]
 lassú
-mechanikus
 meddő
 terméketlen
 lassú
@@ -36162,7 +35952,7 @@ mosott
 tiszta
 fehér
 makulátlan
-<strong>
+becsületes
 tisztességes
 feddhetetlen
 kifogástalan
@@ -37388,6 +37178,7 @@ szeles
 [szélső]
 belső
 centrális
+közbülső
 középső
 középső
 közbülső
@@ -37463,7 +37254,6 @@ csúnya
 visszataszító
 
 [szépítő]
-[szó
 rosszalló
 
 [szétfolyó]
@@ -38315,7 +38105,6 @@ gyógyítható
 elnézhető
 megbocsátható
 bocsánatos
-[probléma
 lényegtelen
 érdektelen
 marginális
@@ -38347,7 +38136,7 @@ ropogós
 átsült
 ropogós
 égett
-<strong>
+bölcs
 okos
 sült
 
@@ -38355,7 +38144,6 @@ sült
 emelt
 
 [sült]
-nyerő
 ragacsos
 nyers
 főtt
@@ -39145,7 +38933,7 @@ vékony
 [teltkarcsú]
 nádszálkarcsú
 szilfid
-</strong>vékony
+vékony
 nádszálkarcsú
 szilfid
 vékony
@@ -39206,7 +38994,6 @@ terheletlen
 felmentett
 
 [terhes]
-mechanikus
 pihentető
 üdítő
 megnyugtató
@@ -39258,7 +39045,6 @@ gyerektelen, gyermektelen
 improduktív
 kopár
 magtalan
-mechanikus
 ösztövér
 sikertelen
 sovány
@@ -39368,7 +39154,6 @@ városi
 városi
 
 [termő]
-mechanikus
 szikes
 terméketlen
 meddő
@@ -39483,7 +39268,6 @@ csekély
 jelentéktelen
 jelképes
 minimális
-[összeg
 jelentéktelen
 csekély
 minimális
@@ -39636,6 +39420,7 @@ elmosódott
 erkölcstelen
 érthetetlen
 fátyolos
+fekete
 felhős
 fojtó
 fojtott
@@ -40149,7 +39934,6 @@ elszomorító
 
 [trópusi]
 sarkvidéki
-[áramlat
 sarkvidéki
 
 [tucatember]
@@ -40245,7 +40029,6 @@ virgonc
 
 [turcsi]
 hegyes2
-hordozható
 hegyes
 
 [tuti]
@@ -41254,7 +41037,6 @@ lovagiatlan
 megvető
 modortalan
 neveletlen
-nyerő
 orcátlan
 paraszt II.
 parlagi, parlagias
@@ -41330,6 +41112,7 @@ költői
 könnyű
 lebilincselő
 lélegzetelállító
+lenyűgöző
 megkapó
 mozgalmas
 mulatságos
@@ -41644,6 +41427,9 @@ bepucolatlan
 
 [vakító]
 tompított
+
+[valaki]
+senki I.
 
 [valamirevaló]
 semmirekellő
@@ -42150,6 +41936,7 @@ nyomott
 rossz I.
 rosszkedvű
 sanyarú
+savanyú
 siralmas
 sírós
 száraz
@@ -42611,7 +42398,6 @@ bátortalan
 [vizenyős]
 száraz
 száraz
-[tekintet
 csillogó
 ragyogó
 fényes
@@ -42629,23 +42415,6 @@ víztelen
 [vizuális]
 auditív
 auditív
-
-[vmihez&gt;]
-állhatatlan
-állhatatos
-
-[vmire&gt;]
-ártatlan
-ártatlan
-ártatlan
-
-[vmivel&gt;]
-inkomparábilis
-inkomparábilis
-komparábilis
-komparábilis
-összehasonlítható
-összehasonlítható
 
 [vokális]
 mássalhangzó
@@ -42669,7 +42438,6 @@ eleven
 fordulatos
 mozgékony
 rohamos
-[előadás
 fordulatos
 eleven
 pergő
@@ -42883,7 +42651,6 @@ testes
 zömök
 
 [várandós]
-mechanikus
 meddő
 
 [váratlan]
@@ -42988,7 +42755,6 @@ védett
 
 [védett]
 gyámoltalan
-megtámadhatatlan
 nyitott
 őrizetlen
 védetlen
@@ -43065,7 +42831,6 @@ ideiglenes
 időleges
 kísérleti
 megmásítható
-nyerő
 provizórikus
 ideiglenes
 átmeneti
@@ -43148,6 +42913,7 @@ tág
 tartalmas
 tekintélyes
 telt
+teltkarcsú
 terebélyes
 terjedelmes
 testes
@@ -43735,7 +43501,6 @@ diétás
 gyenge I.
 kímélő
 könnyű
-mechanikus
 ösztövér
 sovány
 sovány
@@ -43934,6 +43699,7 @@ autentikus
 autentikus
 igaz
 igazi
+rendes
 természetes
 valódi I.
 
@@ -43989,7 +43755,6 @@ eredménytelen
 meddő
 terméketlen
 hálátlan
-mechanikus
 
 [állami]
 egyházi
@@ -44045,9 +43810,6 @@ heveny
 akut
 heveny
 
-[állapotos]
-mechanikus
-
 [állhatatlan]
 állhatatos
 rendíthetetlen
@@ -44056,7 +43818,6 @@ gerinces
 következetes
 megbízható
 hűséges
-vmihez&gt;
 ragaszkodó
 állhatatos
 gerinces
@@ -44068,7 +43829,6 @@ rendületlen
 [állhatatos]
 állhatatlan
 hűtlen
-vmihez&gt;
 megbízhatatlan
 ingatag
 állhatatlan
@@ -44360,11 +44120,8 @@ vétkes
 hibás
 ludas
 veszélyes
-vmire&gt;
 ártalmas
-vmire&gt;
 káros
-vmire&gt;
 csípős
 epés
 bűnös
@@ -44712,7 +44469,6 @@ vízmentes
 száraz
 
 [átütő]
-[győzelem
 jelentéktelen
 
 [ázott]
@@ -44754,7 +44510,6 @@ savanykás
 keserű
 fanyar
 kesernyés
-[bor
 száraz
 undok
 utálatos
@@ -45668,7 +45423,6 @@ gyagya
 tompa
 zavaros
 értetlen
-[javaslat
 áttekinthetetlen
 értelmetlen
 érthetetlen
@@ -45813,6 +45567,7 @@ igénytelen
 krajcáros
 negatív
 ócska
+olcsó
 pocsék
 semmitmondó
 silány
@@ -45870,7 +45625,6 @@ tárgytalan
 semmis
 érvénytelen
 hatálytalan
-megtámadhatatlan
 semmis
 tárgytalan
 
@@ -46305,7 +46059,7 @@ cseppnyi, csöppnyi
 törpe
 
 [óriás II.]
-</strong>alacsony
+alacsony
 kicsi
 cseppnyi
 parányi
@@ -46880,9 +46634,7 @@ komparábilis
 inkomparábilis
 összehasonlíthatatlan
 összehasonlíthatatlan
-vmivel&gt;
 inkomparábilis
-vmivel&gt;
 
 [összeilleszthetetlen]
 összeilleszthető
@@ -46896,6 +46648,7 @@ inkompatibilis
 inkompatibilis
 
 [összeillő]
+disszonáns
 felemás
 inkompatibilis
 összeegyeztethetetlen
@@ -47058,6 +46811,7 @@ kopott
 patinás
 régi
 régimódi
+szakállas
 használt
 viseltes
 kopott
@@ -47102,6 +46856,7 @@ bennfentes
 kihalt
 
 [újszerű]
+banális
 divatjamúlt
 elavult
 elcsépelt
@@ -47231,6 +46986,7 @@ szabadnapos
 [ügyes]
 balkezes
 balog
+béna
 együgyű
 félszeg
 gyámoltalan
@@ -47368,7 +47124,7 @@ sértetlen
 ép
 egészséges
 sértetlen
-<em>biz</em>:
+normális
 épeszű
 
 [üveges]

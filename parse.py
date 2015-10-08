@@ -7,34 +7,58 @@ BULLET = u'\u2022'
 
 def parse_block(text):
     """
-    >>> text = u"<p><strong>borissza </strong>(mn) <em>reg</em> "+BULLET+" antialkoholista, absztinens <em>val, </em>bornemissza <em>reg</em></p>"
-    >>> parse_block(text)
+    >>> parse_block(
+    ...     "<p><strong>borissza </strong>(mn) <em>reg</em> " +
+    ...     BULLET +
+    ...     " antialkoholista, absztinens <em>val, "
+    ...     "</em>bornemissza <em>reg</em></p>"
+    ... )
     ((u'borissza', u'mn', u'reg', ''), [(u'antialkoholista', '', '', ''), (u'absztinens', '', u'val', ''), (u'bornemissza', '', u'reg', '')])
 
     >>> parse_block("<p>"+BULLET+"	[anyag]: elettelen, szervetlen</p>")
     (('', '', '', ''), [(u'elettelen', '', '', ''), (u'szervetlen', '', '', '')])
 
-    >>> parse_block("<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+ BULLET +"marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>")
+    >>> parse_block(
+    ...     "<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+
+    ...     BULLET +
+    ...     "marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>"
+    ... )
     ((u'atpartol', u'ige', '', u'vkihez, vhova'), [(u'marad', '', '', u'vhol'), (u'kitart', '', '', u'vki mellett, vmi mellett'), (u'ragaszkodik', '', '', u'vkihez')])
-    
-    >>> parse_block("<p><strong>orias II. </strong>(mn)<strong> "+ BULLET +" </strong>alacsony, kicsi, cseppnyi, paranyi</p>")
+
+    >>> parse_block(
+    ...     "<p><strong>orias II. </strong>(mn)<strong> "+
+    ...     BULLET +
+    ...     " </strong>alacsony, kicsi, cseppnyi, paranyi</p>"
+    ... )
     ((u'orias II.', u'mn', '', ''), [(u'alacsony', '', '', ''), (u'kicsi', '', '', ''), (u'cseppnyi', '', '', ''), (u'paranyi', '', '', '')])
-    
+
     >>> parse_block("<p><strong>parductestu "+ BULLET +" </strong>debella, macko <em>biz</em></p>")
     ((u'parductestu', '', '', ''), [(u'debella', '', '', ''), (u'macko', '', u'biz', '')])
-    
+
     >>> parse_block('<p>' + BULLET + "	[vallalkozas, uzlet]: nyereseges, hasznos</p>")
     (('', '', '', ''), [(u'nyereseges', '', '', ''), (u'hasznos', '', '', '')])
-    
-    >>> parse_block('<p><strong>megfejthetetlen </strong>(mn) ' + BULLET + ' megfejtheto<strong>, </strong>kezenfekvo, nyilvanvalo, trivialis <em>reg</em></p>')
+
+    >>> parse_block(
+    ...     '<p><strong>megfejthetetlen </strong>(mn) ' +
+    ...     BULLET +
+    ...     ' megfejtheto<strong>, </strong>kezenfekvo, nyilvanvalo, trivialis <em>reg</em></p>'
+    ... )
     ((u'megfejthetetlen', u'mn', '', ''), [(u'megfejtheto', '', '', ''), (u'kezenfekvo', '', '', ''), (u'nyilvanvalo', '', '', ''), (u'trivialis', '', u'reg', '')])
-    
-    >>> parse_block('<p><strong>disszonans </strong>(mn) ' + BULLET + ' <em>szak</em>: harmonikus, osszecsengo</p>')
+
+    >>> parse_block(
+    ...     '<p><strong>disszonans </strong>(mn) ' +
+    ...     BULLET +
+    ...     ' <em>szak</em>: harmonikus, osszecsengo</p>'
+    ... )
     ((u'disszonans', u'mn', '', ''), [(u'harmonikus', '', '', ''), (u'osszecsengo', '', '', '')])
-    
-    >>> parse_block('<p><strong>aradozik </strong>(ige)<em> </em>' + BULLET + '<em> </em>&lt;vkirol, vmirol&gt;: leszol, kritizal, ocsarol</p>')
+
+    >>> parse_block(
+    ...     '<p><strong>aradozik </strong>(ige)<em> </em>' +
+    ...     BULLET +
+    ...     '<em> </em>&lt;vkirol, vmirol&gt;: leszol, kritizal, ocsarol</p>'
+    ... )
     ((u'aradozik', u'ige', '', ''), [(u'leszol', '', '', ''), (u'kritizal', '', '', ''), (u'ocsarol', '', '', '')])
-    
+
     >>> parse_block('<p>' + BULLET + '	alloviz,</p>')
     (('', '', '', ''), [(u'alloviz', '', '', '')])
     """
@@ -55,25 +79,33 @@ def fix_errors(text):
     text = text.replace('<strong>, </strong>', ',')
     text = text.replace('<strong>&gt;</strong>', '&gt;')
     text = text.replace('<strong>&lt;</strong>', '&lt;')
-    text = text.replace('<strong> '+ BULLET +' </strong>', BULLET)
-    text = text.replace(BULLET +' </strong>', '</strong>' + BULLET)
+    text = text.replace('<strong> ' + BULLET + ' </strong>', BULLET)
+    text = text.replace(BULLET + ' </strong>', '</strong>' + BULLET)
     return text
 
 
 def parse_antonyms(text):
     """
-    >>> text = u"<p><strong>borissza </strong>(mn) <em>reg</em> "+BULLET+" antialkoholista, absztinens <em>val</em>, bornemissza <em>reg</em></p>"
+    >>> text = (
+    ...     "<p><strong>borissza </strong>(mn) <em>reg</em> "+
+    ...     BULLET+
+    ...     " antialkoholista, absztinens <em>val</em>, bornemissza <em>reg</em></p>"
+    ... )
     >>> parse_antonyms(text)
     [(u'antialkoholista', '', '', ''), (u'absztinens', '', u'val', ''), (u'bornemissza', '', u'reg', '')]
 
-    >>> parse_antonyms("<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+ BULLET +"marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>")
+    >>> parse_antonyms(
+    ...     "<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+
+    ...     BULLET +
+    ...     "marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>"
+    ... )
     [(u'marad', '', '', u'vhol'), (u'kitart', '', '', u'vki mellett, vmi mellett'), (u'ragaszkodik', '', '', u'vkihez')]
-    
+
     >>> parse_antonyms('<p>' + BULLET + '	alloviz,</p>')
     [(u'alloviz', '', '', '')]
     """
 
-    if BULLET in text:    
+    if BULLET in text:
         pattern = (
             "<p>"
                 "(.*)" +
@@ -141,7 +173,7 @@ def parse_antonym(text):
 
     >>> parse_antonym("	ragaszkodik &lt;vkihez&gt;")
     ('ragaszkodik', '', '', 'vkihez')
-    
+
     >>> parse_antonym(' <em>szak</em>: harmonikus')
     ('harmonikus', '', 'szak', '')
     """
@@ -155,7 +187,11 @@ def parse_antonym(text):
 
 def parse_strong(text):
     """
-    >>> text = "<p><strong>borissza </strong>(mn) <em>reg</em> "+BULLET+" antialkoholista, absztinens <em>val, </em>bornemissza <em>reg</em></p>"
+    >>> text = (
+    ...     "<p><strong>borissza </strong>(mn) <em>reg</em> "+
+    ...     BULLET+
+    ...     " antialkoholista, absztinens <em>val, </em>bornemissza <em>reg</em></p>"
+    ... )
     >>> parse_strong(text)
     (u'borissza', u'mn', u'reg', '')
 

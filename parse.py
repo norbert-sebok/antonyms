@@ -8,34 +8,34 @@ BULLET = u'\u2022'
 def parse_block(text):
     """
     >>> parse_block(
-    ...     "<p><strong>borissza </strong>(mn) <em>reg</em> " +
+    ...     '<p><strong>borissza </strong>(mn) <em>reg</em> ' +
     ...     BULLET +
-    ...     " antialkoholista, absztinens <em>val, "
-    ...     "</em>bornemissza <em>reg</em></p>"
+    ...     ' antialkoholista, absztinens <em>val, '
+    ...     '</em>bornemissza <em>reg</em></p>'
     ... )
     ((u'borissza', u'mn', u'reg', ''), [(u'antialkoholista', '', '', ''), (u'absztinens', '', u'val', ''), (u'bornemissza', '', u'reg', '')])
 
-    >>> parse_block("<p>"+BULLET+"	[anyag]: elettelen, szervetlen</p>")
+    >>> parse_block('<p>'+BULLET+'	[anyag]: elettelen, szervetlen</p>')
     (('', '', '', ''), [(u'elettelen', '', '', ''), (u'szervetlen', '', '', '')])
 
     >>> parse_block(
-    ...     "<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+
+    ...     '<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)'+
     ...     BULLET +
-    ...     "marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>"
+    ...     'marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>'
     ... )
     ((u'atpartol', u'ige', '', u'vkihez, vhova'), [(u'marad', '', '', u'vhol'), (u'kitart', '', '', u'vki mellett, vmi mellett'), (u'ragaszkodik', '', '', u'vkihez')])
 
     >>> parse_block(
-    ...     "<p><strong>orias II. </strong>(mn)<strong> "+
+    ...     '<p><strong>orias II. </strong>(mn)<strong> '+
     ...     BULLET +
-    ...     " </strong>alacsony, kicsi, cseppnyi, paranyi</p>"
+    ...     ' </strong>alacsony, kicsi, cseppnyi, paranyi</p>'
     ... )
     ((u'orias II.', u'mn', '', ''), [(u'alacsony', '', '', ''), (u'kicsi', '', '', ''), (u'cseppnyi', '', '', ''), (u'paranyi', '', '', '')])
 
-    >>> parse_block("<p><strong>parductestu "+ BULLET +" </strong>debella, macko <em>biz</em></p>")
+    >>> parse_block('<p><strong>parductestu '+ BULLET +' </strong>debella, macko <em>biz</em></p>')
     ((u'parductestu', '', '', ''), [(u'debella', '', '', ''), (u'macko', '', u'biz', '')])
 
-    >>> parse_block('<p>' + BULLET + "	[vallalkozas, uzlet]: nyereseges, hasznos</p>")
+    >>> parse_block('<p>' + BULLET + '	[vallalkozas, uzlet]: nyereseges, hasznos</p>')
     (('', '', '', ''), [(u'nyereseges', '', '', ''), (u'hasznos', '', '', '')])
 
     >>> parse_block(
@@ -87,17 +87,17 @@ def fix_errors(text):
 def parse_antonyms(text):
     """
     >>> text = (
-    ...     "<p><strong>borissza </strong>(mn) <em>reg</em> "+
+    ...     '<p><strong>borissza </strong>(mn) <em>reg</em> '+
     ...     BULLET+
-    ...     " antialkoholista, absztinens <em>val</em>, bornemissza <em>reg</em></p>"
+    ...     ' antialkoholista, absztinens <em>val</em>, bornemissza <em>reg</em></p>'
     ... )
     >>> parse_antonyms(text)
     [(u'antialkoholista', '', '', ''), (u'absztinens', '', u'val', ''), (u'bornemissza', '', u'reg', '')]
 
     >>> parse_antonyms(
-    ...     "<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+
+    ...     '<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)'+
     ...     BULLET +
-    ...     "marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>"
+    ...     'marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>'
     ... )
     [(u'marad', '', '', u'vhol'), (u'kitart', '', '', u'vki mellett, vmi mellett'), (u'ragaszkodik', '', '', u'vkihez')]
 
@@ -107,11 +107,11 @@ def parse_antonyms(text):
 
     if BULLET in text:
         pattern = (
-            "<p>"
-                "(.*)" +
+            '<p>'
+                '(.*)' +
                 BULLET +
-                "(.*)"
-            "</p>"
+                '(.*)'
+            '</p>'
         )
         antonyms_block = get_match(pattern, text, 2)
 
@@ -129,7 +129,7 @@ def split_antonyms(text):
     >>> split_antonyms('marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;')
     ['marad &lt;vhol&gt;', 'kitart &lt;vki mellett, vmi mellett&gt;', 'ragaszkodik &lt;vkihez&gt;']
 
-    >>> split_antonyms("	[vallalkozas, uzlet]: nyereseges, hasznos")
+    >>> split_antonyms('	[vallalkozas, uzlet]: nyereseges, hasznos')
     ['nyereseges', 'hasznos']
     """
 
@@ -159,19 +159,19 @@ def split_antonyms(text):
 
 def parse_antonym(text):
     """
-    >>> parse_antonym("antialkoholista")
+    >>> parse_antonym('antialkoholista')
     ('antialkoholista', '', '', '')
-    >>> parse_antonym("absztinens <em>val</em>")
+    >>> parse_antonym('absztinens <em>val</em>')
     ('absztinens', '', 'val', '')
-    >>> parse_antonym("bornemissza <em>reg</em>")
+    >>> parse_antonym('bornemissza <em>reg</em>')
     ('bornemissza', '', 'reg', '')
-    >>> parse_antonym("bornemissza (mn)")
+    >>> parse_antonym('bornemissza (mn)')
     ('bornemissza', 'mn', '', '')
 
-    >>> parse_antonym("	[anyag]: elettelen")
+    >>> parse_antonym('	[anyag]: elettelen')
     ('elettelen', '', '', 'anyag')
 
-    >>> parse_antonym("	ragaszkodik &lt;vkihez&gt;")
+    >>> parse_antonym('	ragaszkodik &lt;vkihez&gt;')
     ('ragaszkodik', '', '', 'vkihez')
 
     >>> parse_antonym(' <em>szak</em>: harmonikus')
@@ -188,9 +188,9 @@ def parse_antonym(text):
 def parse_strong(text):
     """
     >>> text = (
-    ...     "<p><strong>borissza </strong>(mn) <em>reg</em> "+
+    ...     '<p><strong>borissza </strong>(mn) <em>reg</em> '+
     ...     BULLET+
-    ...     " antialkoholista, absztinens <em>val, </em>bornemissza <em>reg</em></p>"
+    ...     ' antialkoholista, absztinens <em>val, </em>bornemissza <em>reg</em></p>'
     ... )
     >>> parse_strong(text)
     (u'borissza', u'mn', u'reg', '')
@@ -198,19 +198,19 @@ def parse_strong(text):
     >>> parse_strong('')
     ('', '', '', '')
 
-    >>> parse_strong("<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+ BULLET +"</p>")
+    >>> parse_strong('<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)'+ BULLET +'</p>')
     (u'atpartol', u'ige', '', u'vkihez, vhova')
     """
 
     pattern = (
-        "<p>"
-            "<strong>"
-                "(.*)"
-            "</strong>"
-            "(.*)" +
+        '<p>'
+            '<strong>'
+                '(.*)'
+            '</strong>'
+            '(.*)' +
             BULLET +
-            "(.*)"
-        "</p>"
+            '(.*)'
+        '</p>'
     )
     m = re.match(pattern, text)
 
@@ -235,11 +235,11 @@ def parse_category(text):
     """
 
     pattern = (
-        "(.*)"
-        "\("
-            "(.*)"
-        "\)"
-        "(.*)"
+        '(.*)'
+        '\('
+            '(.*)'
+        '\)'
+        '(.*)'
     )
     return get_match(pattern, text, 2)
 
@@ -251,11 +251,11 @@ def parse_type(text):
     """
 
     pattern = (
-        "(.*)"
-        "<em>"
-            "(.*)"
-        "</em>"
-        "(.*)"
+        '(.*)'
+        '<em>'
+            '(.*)'
+        '</em>'
+        '(.*)'
     )
     return get_match(pattern, text, 2)
 
@@ -267,24 +267,24 @@ def parse_comment(text):
     """
 
     pattern = (
-        "(.*)"
-        "&lt;"
-            "(.*)"
-        "&gt;"
-        "(.*)"
+        '(.*)'
+        '&lt;'
+            '(.*)'
+        '&gt;'
+        '(.*)'
     )
     return get_match(pattern, text, 2)
 
 
 def parse_word_comment_meta(text):
     """
-    >>> parse_word_comment_meta("antialkoholista")
+    >>> parse_word_comment_meta('antialkoholista')
     ('antialkoholista', '', '')
-    >>> parse_word_comment_meta("absztinens <em>val</em>")
+    >>> parse_word_comment_meta('absztinens <em>val</em>')
     ('absztinens', '', '<em>val</em>')
-    >>> parse_word_comment_meta("bornemissza <em>reg</em>")
+    >>> parse_word_comment_meta('bornemissza <em>reg</em>')
     ('bornemissza', '', '<em>reg</em>')
-    >>> parse_word_comment_meta("bornemissza (mn)")
+    >>> parse_word_comment_meta('bornemissza (mn)')
     ('bornemissza', '', '(mn)')
 
     >>> parse_word_comment_meta('	[anyag]: elettelen')
@@ -293,7 +293,7 @@ def parse_word_comment_meta(text):
     >>> parse_word_comment_meta('')
     ('', '', '')
 
-    >>> parse_word_comment_meta("	ragaszkodik &lt;vkihez&gt;")
+    >>> parse_word_comment_meta('	ragaszkodik &lt;vkihez&gt;')
     ('ragaszkodik', 'vkihez', '')
     """
 

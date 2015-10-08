@@ -17,7 +17,7 @@ class Word(object):
 
 
 def get_htmls():
-    root = zipfile.ZipFile(EPUB_PATH, "r")
+    root = zipfile.ZipFile(EPUB_PATH, 'r')
 
     for name in sorted(root.namelist()):
         if name.startswith('OEBPS/text/content'):

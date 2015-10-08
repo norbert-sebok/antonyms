@@ -1,11 +1,4 @@
 
-[]
-magabiztos
-mérgezett
-otthonos
-rögtönzött
-való I.
-
 [abnormális]
 normális
 szokványos
@@ -637,6 +630,7 @@ rátermett
 találó
 tehetséges
 ügyes
+való I.
 
 [alkalmazhatatlan]
 alkalmazható
@@ -16099,6 +16093,7 @@ közelálló
 közeli
 nemzeti
 odavaló
+otthonos
 őslakó
 saját
 tősgyökeres
@@ -25408,7 +25403,6 @@ kishitű
 bátortalan
 félénk
 félszeg
-
 bizonytalan
 kishitű
 sebezhető
@@ -28451,7 +28445,6 @@ egészséges
 ép
 méregtelenített
 
-
 [mérgező]
 egészséges
 ehető
@@ -30958,7 +30951,7 @@ görcsös
 rideg
 barátságtalan
 sivár
-
+idegen
 járatlan
 tapasztalatlan
 sivár
@@ -33917,7 +33910,6 @@ gyakorlott
 megtervezett
 előkészített
 begyakorlott
-
 
 [rögzített]
 hordozható
@@ -41473,7 +41465,7 @@ téves
 illetlen
 megengedhetetlen
 tilos
-
+alkalmatlan
 érdemtelen
 
 [valódi]

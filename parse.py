@@ -12,7 +12,7 @@ def parse_block(text):
     ((u'borissza', u'mn', u'reg', ''), [(u'antialkoholista', '', '', ''), (u'absztinens', '', u'val', ''), (u'bornemissza', '', u'reg', '')])
 
     >>> parse_block("<p>"+BULLET+"	[anyag]: elettelen, szervetlen</p>")
-    (('', '', '', ''), [(u'elettelen', '', '', u'anyag'), (u'szervetlen', '', '', '')])
+    (('', '', '', ''), [(u'elettelen', '', '', ''), (u'szervetlen', '', '', '')])
 
     >>> parse_block("<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+ BULLET +"marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>")
     ((u'atpartol', u'ige', '', u'vkihez, vhova'), [(u'marad', '', '', u'vhol'), (u'kitart', '', '', u'vki mellett, vmi mellett'), (u'ragaszkodik', '', '', u'vkihez')])
@@ -24,16 +24,19 @@ def parse_block(text):
     ((u'parductestu', '', '', ''), [(u'debella', '', '', ''), (u'macko', '', u'biz', '')])
     
     >>> parse_block('<p>' + BULLET + "	[vallalkozas, uzlet]: nyereseges, hasznos</p>")
-    (('', '', '', ''), [(u'nyereseges', '', '', u'vallalkozas, uzlet'), (u'hasznos', '', '', '')])
+    (('', '', '', ''), [(u'nyereseges', '', '', ''), (u'hasznos', '', '', '')])
     
     >>> parse_block('<p><strong>megfejthetetlen </strong>(mn) ' + BULLET + ' megfejtheto<strong>, </strong>kezenfekvo, nyilvanvalo, trivialis <em>reg</em></p>')
     ((u'megfejthetetlen', u'mn', '', ''), [(u'megfejtheto', '', '', ''), (u'kezenfekvo', '', '', ''), (u'nyilvanvalo', '', '', ''), (u'trivialis', '', u'reg', '')])
     
     >>> parse_block('<p><strong>disszonans </strong>(mn) ' + BULLET + ' <em>szak</em>: harmonikus, osszecsengo</p>')
-    ((u'disszonans', u'mn', '', ''), [(u'harmonikus', '', u'szak', ''), (u'osszecsengo', '', '', '')])
+    ((u'disszonans', u'mn', '', ''), [(u'harmonikus', '', '', ''), (u'osszecsengo', '', '', '')])
     
     >>> parse_block('<p><strong>aradozik </strong>(ige)<em> </em>' + BULLET + '<em> </em>&lt;vkirol, vmirol&gt;: leszol, kritizal, ocsarol</p>')
-    ((u'aradozik', u'ige', '', 'vkirol, vmirol'), [(u'leszol', '', '', ''), (u'kritizal', '', '', ''), (u'ocsarol', '', '', '')])
+    ((u'aradozik', u'ige', '', ''), [(u'leszol', '', '', ''), (u'kritizal', '', '', ''), (u'ocsarol', '', '', '')])
+    
+    >>> parse_block('<p>' + BULLET + '	alloviz,</p>')
+    (('', '', '', ''), [(u'alloviz', '', '', '')])
     """
 
     text = fix_errors(text)
@@ -65,9 +68,12 @@ def parse_antonyms(text):
 
     >>> parse_antonyms("<p><strong>atpartol</strong>&lt;vkihez, vhova&gt; (ige)"+ BULLET +"marad &lt;vhol&gt;, kitart &lt;vki mellett, vmi mellett&gt;, ragaszkodik &lt;vkihez&gt;</p>")
     [(u'marad', '', '', u'vhol'), (u'kitart', '', '', u'vki mellett, vmi mellett'), (u'ragaszkodik', '', '', u'vkihez')]
-   """
+    
+    >>> parse_antonyms('<p>' + BULLET + '	alloviz,</p>')
+    [(u'alloviz', '', '', '')]
+    """
 
-    if BULLET in text:
+    if BULLET in text:    
         pattern = (
             "<p>"
                 "(.*)" +
@@ -77,7 +83,7 @@ def parse_antonyms(text):
         )
         antonyms_block = get_match(pattern, text, 2)
 
-        return [parse_antonym(a) for a in split_antonyms(antonyms_block)]
+        return [parse_antonym(a) for a in split_antonyms(antonyms_block) if a]
 
     else:
         return []
@@ -92,10 +98,13 @@ def split_antonyms(text):
     ['marad &lt;vhol&gt;', 'kitart &lt;vki mellett, vmi mellett&gt;', 'ragaszkodik &lt;vkihez&gt;']
 
     >>> split_antonyms("	[vallalkozas, uzlet]: nyereseges, hasznos")
-    ['[vallalkozas, uzlet]: nyereseges', 'hasznos']
+    ['nyereseges', 'hasznos']
     """
 
     antonyms = []
+
+    if ':' in text:
+        text = text[text.index(':')+1:]
 
     in_meta = False
     last_i = 0

@@ -15,6 +15,13 @@ class Word(object):
         self.comment = comment
         self.antonyms = []
 
+    def add_antonym(self, other):
+        for a in self.antonyms:
+            if (a.word, a.category) == (other.word, other.category):
+                return
+        else:
+            self.antonyms.append(other)
+
 
 def get_htmls():
     root = zipfile.ZipFile(EPUB_PATH, 'r')
@@ -48,8 +55,8 @@ for html in get_htmls():
             else:
                 words[(word, current.category)] = antonym = Word(word, current.category, type, comment)
 
-            current.antonyms.append(antonym)
-            antonym.antonyms.append(current)
+            current.add_antonym(antonym)
+            antonym.add_antonym(current)
 
 
 with open('antonyms.txt', 'w') as f:

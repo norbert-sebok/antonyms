@@ -68,4 +68,4 @@ with open('antonyms.txt', 'w') as f:
                 f.write(u'{}\n'.format(antonym.word).encode('utf8'))
 
 
-print len(words)
+print '{} words'.format(len(words))

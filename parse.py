@@ -72,6 +72,8 @@ def parse_block(text):
 
 
 def fix_errors(text):
+    text = text.replace('II.', '')
+    text = text.replace('I.', '')
     text = text.replace('<em> </em>', '')
     text = text.replace(', </em>', '</em>,')
     text = text.replace('<strong> </strong>', '')

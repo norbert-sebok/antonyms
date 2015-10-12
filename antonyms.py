@@ -4,7 +4,7 @@ from scrapy.selector import Selector
 import zipfile
 
 
-EPUB_PATH = 'TAMOP-4_2_5-09_Ellentetes_jelentesu_szavak_adatbazisa.epub'
+EPUB_PATH = 'books/TAMOP-4_2_5-09_Ellentetes_jelentesu_szavak_adatbazisa.epub'
 
 
 class Word(object):
@@ -59,7 +59,7 @@ for html in get_htmls():
             antonym.add_antonym(current)
 
 
-with open('antonyms.txt', 'w') as f:
+with open('words/antonyms.txt', 'w') as f:
     for (word, category) in sorted(words.keys()):
         word = words[(word, category)]
         if word.category == 'mn':
